@@ -332,3 +332,6 @@ ASALocalRun/
 
 .DS_Store
 
+google-services.json
+
+GoogleService-Info.plist

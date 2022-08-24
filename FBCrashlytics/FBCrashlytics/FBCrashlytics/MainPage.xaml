@@ -5,7 +5,13 @@
              x:Class="FBCrashlytics.MainPage">
 
     <StackLayout>
-        <Button VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Text="Click me" BackgroundColor="DarkBlue" TextColor="White"/>
+        <Button
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="Center"
+            Text="Click me"
+            Clicked="Button_Clicked"
+            BackgroundColor="DarkBlue"
+            TextColor="White"/>
     </StackLayout>
 
 </ContentPage>

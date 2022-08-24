@@ -14,6 +14,11 @@ namespace FBCrashlytics
         {
             InitializeComponent();
         }
+
+        void Button_Clicked(System.Object sender, System.EventArgs e)
+        {
+            throw new InvalidOperationException("Test Exception" + " Should not have clicked this :P");
+        }
     }
 }
 
