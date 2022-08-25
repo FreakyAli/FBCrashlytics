@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net6.0-android;net6.0-ios;</TargetFrameworks>
+		<OutputType>Exe</OutputType>
+		<RootNamespace>FBCrashlytics.MAUI</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- Display name -->
+		<ApplicationTitle>FBCrashlytics.MAUI</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.freakynation.fbcrashlytics</ApplicationId>
+		<ApplicationIdGuid>B8372D7E-50B2-4B15-B8E9-BF4861D09F20</ApplicationIdGuid>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- App Icon -->
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+
+		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Xamarin.Firebase.iOS.Crashlytics" />
+	  <None Remove="Platforms\Android\google-services.json" />
+	  <None Remove="Platforms\iOS\GoogleService-Info.plist" />
+	</ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-android'">
+	  <PackageReference Include="Xamarin.Firebase.Crashlytics.NDK" Version="118.2.12" />
+	  <PackageReference Include="Xamarin.Firebase.Crashlytics" Version="118.2.12" />
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="Xamarin.Firebase.iOS.Crashlytics" Version="8.10.0.1" />
+	</ItemGroup>
+	<ItemGroup>
+	  <GoogleServicesJson Include="Platforms\Android\google-services.json" />
+	</ItemGroup>
+	<ItemGroup>
+	  <AndroidResource Update="Platforms\Android\Resources\values\strings.xml">
+	    <SubType></SubType>
+	    <Generator></Generator>
+	  </AndroidResource>
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Platforms\iOS\GoogleService-Info.plist" />
+	</ItemGroup>
+</Project>
