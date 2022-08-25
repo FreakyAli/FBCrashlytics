@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBCrashlytics.iOS", "FBCras
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBCrashlytics", "FBCrashlytics\FBCrashlytics\FBCrashlytics.csproj", "{FA19903A-E0BF-41A5-9D9F-B2C220945148}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBCrashlytics.MAUI", "FBCrashlytics.MAUI\FBCrashlytics.MAUI.csproj", "{4DD8EC7A-91D8-4F55-AF93-E30E743ECB06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{FA19903A-E0BF-41A5-9D9F-B2C220945148}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{FA19903A-E0BF-41A5-9D9F-B2C220945148}.Release|iPhone.ActiveCfg = Release|Any CPU
 		{FA19903A-E0BF-41A5-9D9F-B2C220945148}.Release|iPhone.Build.0 = Release|Any CPU
+		{4DD8EC7A-91D8-4F55-AF93-E30E743ECB06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DD8EC7A-91D8-4F55-AF93-E30E743ECB06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DD8EC7A-91D8-4F55-AF93-E30E743ECB06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DD8EC7A-91D8-4F55-AF93-E30E743ECB06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DD8EC7A-91D8-4F55-AF93-E30E743ECB06}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{4DD8EC7A-91D8-4F55-AF93-E30E743ECB06}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{4DD8EC7A-91D8-4F55-AF93-E30E743ECB06}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{4DD8EC7A-91D8-4F55-AF93-E30E743ECB06}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{4DD8EC7A-91D8-4F55-AF93-E30E743ECB06}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{4DD8EC7A-91D8-4F55-AF93-E30E743ECB06}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{4DD8EC7A-91D8-4F55-AF93-E30E743ECB06}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{4DD8EC7A-91D8-4F55-AF93-E30E743ECB06}.Release|iPhone.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
