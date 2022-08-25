@@ -55,6 +55,12 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
+    <PackageReference Include="Xamarin.Firebase.Crashlytics">
+      <Version>118.2.12</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.Crashlytics.NDK">
+      <Version>118.2.12</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -65,7 +71,6 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
-    <None Include="google-services.json" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\styles.xml" />
@@ -82,6 +87,10 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\values\strings.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
@@ -91,6 +100,9 @@
       <Project>{FA19903A-E0BF-41A5-9D9F-B2C220945148}</Project>
       <Name>FBCrashlytics</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <GoogleServicesJson Include="google-services.json" />
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

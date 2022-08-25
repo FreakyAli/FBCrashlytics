@@ -68,7 +68,6 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="GoogleService-Info.plist" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -126,6 +125,9 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
+    <PackageReference Include="Xamarin.Firebase.iOS.Crashlytics">
+      <Version>8.10.0.1</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -133,5 +135,8 @@
       <Project>{FA19903A-E0BF-41A5-9D9F-B2C220945148}</Project>
       <Name>FBCrashlytics</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="GoogleService-Info.plist" />
   </ItemGroup>
 </Project>

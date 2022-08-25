@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using Firebase.Crashlytics;
 using Foundation;
 using UIKit;
 
@@ -24,7 +24,10 @@ namespace FBCrashlytics.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-
+            Firebase.Core.App.Configure();
+            Crashlytics.SharedInstance.Init();
+            Crashlytics.SharedInstance.SetCrashlyticsCollectionEnabled(true);
+            Crashlytics.SharedInstance.SendUnsentReports();
             return base.FinishedLaunching(app, options);
         }
     }
